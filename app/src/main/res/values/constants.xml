@@ -1,4 +1,4 @@
 <resources>
     <!-- API -->
-    <string name="app_url">http://161.35.38.139/api/v1/</string>
+    <string name="app_url">http://192.168.100.2:8081/</string>
 </resources>

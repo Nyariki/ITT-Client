@@ -1,4 +1,4 @@
-package com.itt.client.view
+package com.itt.client.view.main
 
 import androidx.lifecycle.ViewModel
 import com.itt.client.data.repository.RestRepository

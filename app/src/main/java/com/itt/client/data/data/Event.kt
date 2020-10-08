@@ -15,6 +15,4 @@ class Event : Serializable {
     var color: String? = null
     var message: String? = null
     var time: String? = null
-    var createdAt: Date? = null
-    var updatedAt: Date? = null
 }

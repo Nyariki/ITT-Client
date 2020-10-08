@@ -7,7 +7,8 @@ import com.itt.client.createOkHttpClient
 import com.itt.client.createWebService
 import com.itt.client.data.remote.RestRequests
 import com.itt.client.data.repository.RestRepository
-import com.itt.client.view.MainActivityViewModel
+import com.itt.client.view.main.MainActivityViewModel
+import com.itt.client.view.report.ReportActivityViewModel
 import org.koin.android.ext.koin.androidContext
 import org.koin.android.viewmodel.dsl.viewModel
 import org.koin.dsl.module
@@ -16,9 +17,6 @@ import org.koin.dsl.module
  * Koin main module
  */
 val MainAppModule = module {
-    //Inject shared prefs repo as singleton
-    factory { androidContext() }
-
     // Gson
     single { Gson() }
 
@@ -39,6 +37,7 @@ val DataModule = module {
 val ViewModelsModule = module {
     //Provides an instance of ViewModel and binds it to an Android Component lifecycle
     viewModel { MainActivityViewModel(get()) }
+    viewModel { ReportActivityViewModel(get()) }
 
 }
 

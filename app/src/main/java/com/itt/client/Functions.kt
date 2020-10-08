@@ -13,11 +13,13 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.google.android.material.snackbar.Snackbar
 import com.google.gson.Gson
+import com.google.gson.reflect.TypeToken
 import com.itt.client.data.remote.Resource
 import com.itt.client.data.remote.RestResponse
 import com.jakewharton.retrofit2.adapter.kotlin.coroutines.CoroutineCallAdapterFactory
 import kotlinx.coroutines.flow.flow
 import okhttp3.OkHttpClient
+import okhttp3.ResponseBody
 import okhttp3.logging.HttpLoggingInterceptor
 import retrofit2.HttpException
 import retrofit2.Response
@@ -137,10 +139,10 @@ suspend fun <RESPONSE : Any> makeNetworkCall(function: suspend () -> Response<RE
         val response = function()
         emit(
             if (response.code() in 200..299) Resource.success(response.body())
-            else Resource.error(
-                (Gson().fromJson(response.errorBody()!!.string(), RestResponse::class.java)).message
-                    ?: "", null, response.code()
-            )
+            else {
+                val body : RestResponse<Any> = Gson().fromJson<RestResponse<Any>>(response.errorBody()!!.string())
+                Resource.error(body.message?: "", null, response.code())
+            }
         )
     } catch (e: Exception) {
         emit(
@@ -180,5 +182,7 @@ fun RecyclerView.addItemDecorationWithoutLastDivider() {
         }
     })
 }
+
+inline fun <reified T> Gson.fromJson(json: String) = fromJson<T>(json, object: TypeToken<T>() {}.type)
 
 

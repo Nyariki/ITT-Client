@@ -18,14 +18,11 @@ class ListResponse<T> : BaseApiResponse() {
 
 
 abstract class BaseApiResponse {
-    @SerializedName("success")
-    val success: Int? = 0
+    @SerializedName("status")
+    val status: Boolean? = false
 
     @SerializedName("message")
     val message: String? = null
-
-    val status: Boolean
-        get() = success == 1
 }
 
 class LoginResponse {
