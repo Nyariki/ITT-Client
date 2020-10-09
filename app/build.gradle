@@ -68,5 +68,10 @@ dependencies {
     //Perceler
     implementation 'org.parceler:parceler-api:1.1.12'
     kapt 'org.parceler:parceler:1.1.12'
+    //fancy fab
+    implementation 'com.github.clans:fab:1.6.4'
+
+    //Wall clock
+    implementation 'turki.alkhateeb:vectoranalogclock:1.0.0'
 
 }

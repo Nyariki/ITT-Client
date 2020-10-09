@@ -27,6 +27,7 @@ import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
 import java.text.DecimalFormat
 import java.util.concurrent.TimeUnit
+import java.text.SimpleDateFormat
 
 
 fun Activity.showToast(message: String) {
@@ -184,5 +185,10 @@ fun RecyclerView.addItemDecorationWithoutLastDivider() {
 }
 
 inline fun <reified T> Gson.fromJson(json: String) = fromJson<T>(json, object: TypeToken<T>() {}.type)
+
+/**
+ * Default time format
+ */
+val defaultTimeFormat =  SimpleDateFormat("YYYY-MM-dd hh:mm a")
 
 

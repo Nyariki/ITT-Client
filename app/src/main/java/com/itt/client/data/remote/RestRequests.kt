@@ -11,7 +11,7 @@ import retrofit2.http.GET
 interface RestRequests {
 
     @GET("start")
-    suspend fun startServerAsync(): Response<ObjectResponse<Any?>>
+    suspend fun startServerAsync(): Response<ObjectResponse<String>>
 
     @GET("report")
     suspend fun fetchReportsAsync(): Response<ListResponse<Event>>
