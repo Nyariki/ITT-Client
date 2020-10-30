@@ -1,7 +1,7 @@
 #### ITT Client
-This is an android app for the [ITT-Project](https://github.com/users/Nyariki/projects/2). It is written in Kotlin and built using a modified MVVM architecture.
+This is the Android client for the [ITT-Project](https://github.com/users/Nyariki/projects/2). It is written in Kotlin and built using a modified MVVM architecture.
 
-- Open the [project](ITT-CLIENT) in Android studio.
+- Open the project in Android studio.
 - In the [constants](app/src/main/res/values/constants.xml) file, update the ```app_url``` to the address of the running Spring boot backend app.  
 - If you are on the same network, the address can be obtained by running ```ipconfig```(windows) or ```ifconfig```(unix) on the console. Copy and use the IPV4 address, typically in the format ```192.168.xxx.xxx```  
 - Run the app on Android Studio
