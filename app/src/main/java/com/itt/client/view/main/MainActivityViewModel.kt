@@ -8,4 +8,11 @@ class MainActivityViewModel(
 ) : ViewModel() {
 
     suspend fun startServer() = restRepository.startServer()
+
+    suspend fun fetchCurrentEvents(
+        time: String,
+        colorStart: String?,
+        colorStop: String?,
+        colorReport: String?
+    ) = restRepository.fetchCurrentEvents(time, colorStart, colorStop, colorReport)
 }

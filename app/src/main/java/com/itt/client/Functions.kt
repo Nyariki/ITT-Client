@@ -191,4 +191,14 @@ inline fun <reified T> Gson.fromJson(json: String) = fromJson<T>(json, object: T
  */
 val defaultTimeFormat =  SimpleDateFormat("YYYY-MM-dd hh:mm a")
 
+/**
+ * Current Event time format
+ */
+val currentEventTimeFormat =  SimpleDateFormat("YYYY-MM-dd hh:mm:ss.SSS")
+
+/**
+ * Program time format
+ */
+val programTimeFormat =  SimpleDateFormat("hh:mm:ss")
+
 

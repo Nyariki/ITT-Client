@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">ITT-CLIENT</string>
+    <string name="message_current_tasks_fetched">Current tasks updated</string>
+    <string name="txt_current_events">current events</string>
 </resources>

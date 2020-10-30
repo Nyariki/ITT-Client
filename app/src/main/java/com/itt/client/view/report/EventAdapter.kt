@@ -12,7 +12,7 @@ import kotlinx.android.synthetic.main.layout_event_item.view.*
 
 class EventAdapter() : RecyclerView.Adapter<EventAdapter.EventViewHolder>() {
 
-    private lateinit var events: MutableList<Event>
+    private var events: MutableList<Event> = mutableListOf()
 
     override fun onBindViewHolder(@NonNull holder: EventViewHolder, position: Int) {
         holder.bind(events[position])
@@ -29,8 +29,10 @@ class EventAdapter() : RecyclerView.Adapter<EventAdapter.EventViewHolder>() {
         return events.size
     }
 
-    fun setEvents(events: MutableList<Event>) {
-        this.events = events
+    fun setEvents(events: MutableList<Event>, clearPrevious : Boolean = true) {
+        if(clearPrevious)
+            this.events.clear()
+        this.events.addAll(0, events)
         this.notifyDataSetChanged()
     }
 
