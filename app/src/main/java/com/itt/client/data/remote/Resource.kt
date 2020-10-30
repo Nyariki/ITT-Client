@@ -1,7 +1,5 @@
 package com.itt.client.data.remote
 
-import com.learning.kifaru.data.remote.Status
-
 /**
  * A generic class that holds a value with its loading state.
  * @param <T>

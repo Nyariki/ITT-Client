@@ -11,7 +11,7 @@ import com.itt.client.data.remote.ObjectResponse
 import com.itt.client.data.remote.Resource
 import com.itt.client.view.report.EventAdapter
 import com.itt.client.view.report.ReportActivity
-import com.learning.kifaru.data.remote.Status
+import com.itt.client.data.remote.Status
 import kotlinx.android.synthetic.main.activity_main.*
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.GlobalScope

@@ -1,4 +1,4 @@
-package com.learning.kifaru.data.remote
+package com.itt.client.data.remote
 
 /* Status of a resource that is provided to the UI.
 *

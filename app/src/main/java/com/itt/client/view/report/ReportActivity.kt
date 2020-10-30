@@ -12,7 +12,7 @@ import com.itt.client.data.data.Event
 import com.itt.client.data.remote.ListResponse
 import com.itt.client.data.remote.Resource
 import com.itt.client.showSnack
-import com.learning.kifaru.data.remote.Status
+import com.itt.client.data.remote.Status
 import kotlinx.android.synthetic.main.activity_report.*
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.GlobalScope
